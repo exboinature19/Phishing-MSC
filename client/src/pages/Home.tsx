@@ -60,17 +60,20 @@ export default function Home() {
   const [stats, setStats] = useState({ total:  5418, phishing: 1568, safe: 3850 });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Load history from localStorage on mount
-  useEffect(() => {
-    const savedHistory = localStorage.getItem("phishguard_history");
-    if (savedHistory) {
-      setHistory(JSON.parse(savedHistory));
-    }
-    const savedStats = localStorage.getItem("phishguard_stats");
-    if (savedStats) {
-      setStats(JSON.parse(savedStats));
-    }
-  }, []);
+
+  // COMMENT OUT THIS ENTIRE BLOCK TEMPORARILY
+/*
+useEffect(() => {
+  const savedHistory = localStorage.getItem("phishguard_history");
+  if (savedHistory) {
+    setHistory(JSON.parse(savedHistory));
+  }
+  const savedStats = localStorage.getItem("phishguard_stats");
+  if (savedStats) {
+    setStats(JSON.parse(savedStats));
+  }
+}, []);
+*/
 
   // Save history to localStorage
   useEffect(() => {

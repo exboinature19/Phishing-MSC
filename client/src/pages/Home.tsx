@@ -57,7 +57,7 @@ export default function Home() {
   const [showTokenInput, setShowTokenInput] = useState(!hfToken);
   const [activeTab, setActiveTab] = useState<"single" | "batch" | "history" | "report">("single");
   const [history, setHistory] = useState<AnalysisHistoryItem[]>([]);
-  const [stats, setStats] = useState({ total: 247, phishing: 112, safe: 135 });
+  const [stats, setStats] = useState({ total:  5418, phishing: 1568, safe: 3850 });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Load history from localStorage on mount
